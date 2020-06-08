@@ -1,0 +1,131 @@
+internal:
+  options:
+    class: nav navbar-nav
+  links:
+    staff_partners_practitioners:
+      label: Staff, Partners and Practitioners
+      url: //www.warwickshire.gov.uk/
+    intranet:
+      url: //www.warwickshire.gov.uk/
+    hrms:
+      label: HRMS
+      url: //www.warwickshire.gov.uk/
+    gmail:
+      url: https://mail.google.com/
+    more:
+      type: dropdown
+      links:
+        wilma:
+          label: WILMA
+          url: //warwickshire.learningpool.com/
+        agresso:
+          url: //www.warwickshire.gov.uk/
+        edrm:
+          label: EDRM
+          url: //www.warwickshire.gov.uk/
+
+external:
+  options:
+    class: nav navbar-nav
+  links:
+    residents:
+      type: dropdown
+      links:
+        residents_home:
+          label: Residents - home
+          url: http://www.warwickshire.gov.uk
+        environmental:
+          url: http://www.warwickshire.gov.uk/environment
+        libraries_and_leisure:
+          url: http://www.warwickshire.gov.uk/librariesandleisure
+        roads_and_travel:
+          url: http://www.warwickshire.gov.uk/roadsandtravel
+        registrations:
+          url: http://www.warwickshire.gov.uk/registrations
+        safety_and_crime:
+          url: http://www.warwickshire.gov.uk/safetyandcrime
+        schools_and_learning:
+          url: http://www.warwickshire.gov.uk/schoolsandlearning
+        social_care_and_support:
+          url: http://www.warwickshire.gov.uk/socialcareandhealth
+    business:
+      type: dropdown
+      links:
+        business_home:
+          label: Business - home
+          url: http://www.warwickshire.gov.uk/business
+        business_support_organisations:
+          url: http://www.warwickshire.gov.uk/businesssupportorganisations
+        growing_your_business:
+          url: http://www.warwickshire.gov.uk/growingyourbusiness
+        health_and_safety_for_businesses:
+          url: http://www.warwickshire.gov.uk/businesshealthandsafety
+        locating_your_business:
+          url: http://www.warwickshire.gov.uk/locatingyourbusiness
+        other_business_services:
+          url: http://www.warwickshire.gov.uk/otherbusinessservices
+        regulatory_business_service_and_advice:
+          url: http://www.warwickshire.gov.uk/businessadvice
+        starting_a_business:
+          url: http://www.warwickshire.gov.uk/startingabusiness    
+    the_council:
+      type: dropdown
+      links:
+        council_home:
+          label: The council - home
+          url: http://www.warwickshire.gov.uk/corporate
+        democracy:
+          url: http://www.warwickshire.gov.uk/democracy
+        finance_and_suppliers:
+          url: http://www.warwickshire.gov.uk/financeandsuppliers
+        jobs:
+          url: http://www.warwickshire.gov.uk/jobs
+        lists_data_and_information:
+          label: Lists, data and information
+          url: http://www.warwickshire.gov.uk/listsanddata
+        organisation:
+          url: http://www.warwickshire.gov.uk/organisation
+        performance:
+          label: Our performance
+          url: http://www.warwickshire.gov.uk/performance
+        partnerships:
+          url: http://www.warwickshire.gov.uk/partnerships
+        policies_standards_and_legislation:
+          label: Policies, standards and legislation
+          url: http://www.warwickshire.gov.uk/policies
+        projects:
+          url: http://www.warwickshire.gov.uk/projects
+        strategies_and_priorities:
+          url: http://www.warwickshire.gov.uk/strategies
+    more:
+      type: dropdown
+      links:
+        country_parks:
+          url: http://countryparks.warwickshire.gov.uk/
+        health_and_wellbeing:
+          url: http://hwb.warwickshire.gov.uk/
+        heritage_and_culture:
+          url: http://heritage.warwickshire.gov.uk/
+        invest_in_warwickshire:
+          label: Invest in Warwickshire
+          url: http://invest.warwickshire.gov.uk/
+        jobs:
+          url: http://www.warwickshire.gov.uk/jobs
+        living_well_with_dementia:
+          url: http://www.livingwellwithdementia.org/
+        local_access_forum:
+          url: http://laf.warwickshire.gov.uk/
+        news:
+          url: http://news.warwickshire.gov.uk/
+        public_health:
+          url: http://publichealth.warwickshire.gov.uk/
+        staff_partners_and_practitioners:
+          label: Staff, Partners and Practitioners
+          url: http://www.warwickshire.gov.uk/spp
+        waste_partnership:
+          url: http://wwp.warwickshire.gov.uk/
+        whittle_park:
+          label: Whittle Park
+          url: http://whittlefordpark.warwickshire.gov.uk/
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WCC Web Styles</title>
+     
+    <%= stylesheet_link_tag    "application", media: "all"%>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag 'html5' %>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <!--To configure this to point internal\external change the render link -->
+      <%= render 'wcc_style/layouts/header' %>
+      <div class="container-full">
+        <main role="main">
+          <%= render 'wcc_style/layouts/messages' %>
+          <%= yield %>
+        </main>
+      </div>
+      <div id="push"></div>
+    </div>
+    <!--To configure this to point internal\external change the render link -->
+    <%= render 'wcc_style/layouts/footer' %>
+  </body>
+
+</html>

@@ -1,0 +1,44 @@
+<h2>Resources</h2>
+
+<div class="action-top pull-right">
+  <%= paginate @resources, :theme => 'twitter-bootstrap-3' %>
+</div>
+
+<table class='table table-condensed'>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th class="hidden-xs">Sub Title</th>
+      <th class="hidden-xs">Author</th>
+      <th class="hidden-xs">Produced By</th>
+      <th class="hidden-xs">Edition</th>
+      <th class="hidden-xs">Series</th>
+      <th class="hidden-xs">Control Number</th>
+      <th class="hidden-xs">Publisher</th>
+      <th class="hidden-xs">Publish Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resources.each do |resource| %>
+      <tr>
+        <td><%= link_to Resource.find(resource.id).title, resource %></td>
+        <td class="hidden-xs"><%= resource.subtitle %></td>
+        <td class="hidden-xs"><%= resource.author %></td>
+        <td class="hidden-xs"><%= resource.producedby %></td>
+        <td class="hidden-xs"><%= resource.edition %></td>
+        <td class="hidden-xs"><%= resource.series %></td>
+        <td class="hidden-xs"><%= resource.controlno %></td>
+        <td class="hidden-xs"><%= resource.publisher %></td>
+        <td class="hidden-xs"><%= l(resource.publishdate) if !resource.publishdate.nil? %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="action-bottom">
+  <%= link_to 'New Resource', new_resource_path, :class => "btn btn-primary", :role =>"button" %>
+  <div class="pull-right">
+    <%= paginate @resources, :theme => 'twitter-bootstrap-3' %>
+  </div>
+</div>

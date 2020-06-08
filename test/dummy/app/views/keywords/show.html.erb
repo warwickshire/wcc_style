@@ -1,0 +1,5 @@
+<h2>Keyword: <%= @keyword.title %></h2>
+
+<%= link_to 'Edit', edit_keyword_path(@keyword), :class => "btn btn-primary", :role =>"button" %>
+<%= link_to 'Back', keywords_path, :class => "btn btn-default", :role =>"button" %>
+<%= link_to 'Delete', keywords_path, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default", :role =>"button" %>

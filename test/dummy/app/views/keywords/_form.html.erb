@@ -1,0 +1,13 @@
+<%= form_for(@keyword, :html => {:class => "form-horizontal", :role => "form"}) do |f| %>
+  <%= render 'wcc_style/layouts/error_messages', object: @keyword %>
+  
+  <div class="form-group">
+    <%= f.label :title, :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <%= f.text_field :title, :class => "form-control", :placeholder => "Title" %>
+    </div>
+  </div>
+  
+  <%= f.submit 'Save', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', keywords_path, :class => "btn btn-default", :role =>"button" %>
+<% end %>

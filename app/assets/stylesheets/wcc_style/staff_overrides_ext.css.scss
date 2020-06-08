@@ -1,0 +1,14 @@
+/****************** Site colour defaults ******************/
+$banner-bg-color: #47657F; 
+$subnav-bg-color: #3e586f;
+$subnav-link-color: #fff;
+$link-color: #285e8e;
+$primary-btn-color: #47657F;
+$primary-btn-focus: #3e586f;
+$body-bg-color: #e6e6e6;
+$footer-bg-color: #e6e6e6;
+$main-bg-color: #eee;
+$main-header-color: #fff;
+
+@import "framework_and_overrides.css.scss";
+@import "external_overrides.css.scss";

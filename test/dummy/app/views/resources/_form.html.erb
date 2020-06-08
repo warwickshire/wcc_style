@@ -1,0 +1,85 @@
+<%= form_for(@resource, :html => {:class => "form-horizontal", :role => "form"}) do |f| %>
+  <%= render 'wcc_style/layouts/error_messages', object: @resource %>
+
+  <div class="form-group">
+    <%= f.label :title, :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-9">
+      <%= f.text_field :title, :class => "form-control", :placeholder => "Title" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :subtitle, "Sub Title", :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-9">
+      <%= f.text_field :subtitle, :class => "form-control", :placeholder => "Sub title" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :keyword_id, :class=>'col-sm-2 control-label' %>
+      <div class="col-sm-9">
+      <%= f.collection_select :keyword_id, Keyword.all, :id, :title, {prompt: "Select a keyword"}, {class: "form-control"} %>
+      </div>
+  </div>   
+
+  <div class="form-group">
+    <%= f.label :author, :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <%= f.text_field :author, :class => "form-control", :placeholder => "Author" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :producedby, "Produced By", :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <%= f.text_field :producedby, :class => "form-control", :placeholder => "Produced By" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :edition, :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <%= f.text_field :edition, :class => "form-control", :placeholder => "Edition" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-9">
+      <%= f.text_area :description, :class => "form-control", :placeholder => "Description" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :series, :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <%= f.text_field :series, :class => "form-control", :placeholder => "Series" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :controlno, "Control Number", :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <%= f.text_field :controlno, :class => "form-control", :placeholder => "Control No" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :publisher, :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <%= f.text_field :publisher, :class => "form-control", :placeholder => "Publisher" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :publishdate, "Publish Date", :class=>'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <div class="input-group">
+        <%= f.text_field   :publishdate,
+        :id => "resource_publishdate",
+        :class => "form-control",
+        :placeholder => "Publish Date", 'data-behaviour' => 'datepicker', "data-date-format" => 'dd-mm-yyyy',
+        :value => if !@resource.publishdate.nil? then @resource.publishdate.strftime("%d-%m-%Y") end %>
+        <span class="input-group-addon" id="calendarbtn"><i class="glyphicon glyphicon-calendar"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <%= f.submit 'Save', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', resources_path, :class => "btn btn-default", :role =>"button" %>
+
+<% end %>

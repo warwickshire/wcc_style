@@ -1,0 +1,28 @@
+<h2>Keywords</h2>
+
+<div class="action-top pull-right">
+  <%= paginate @keywords, :theme => 'twitter-bootstrap-3' %>
+</div>
+
+<table class='table table-condensed'>
+  <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @keywords.each do |keyword| %>
+      <tr>
+        <td><%= link_to Keyword.find(keyword.id).title, keyword %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="action-bottom">
+  <%= link_to 'New Keyword', new_keyword_path, :class => "btn btn-primary", :role =>"button" %>  
+  <div class="pull-right">
+    <%= paginate @keywords, :theme => 'twitter-bootstrap-3' %>
+  </div>
+</div>

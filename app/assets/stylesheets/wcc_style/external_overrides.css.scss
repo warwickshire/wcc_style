@@ -1,0 +1,116 @@
+/****************** Site wide styles ******************/
+body {
+  padding-bottom: 40px;
+  background-color: #F9FFF8;
+}
+
+main {
+  background-color: #F9FFF8;
+  padding-left:10px !important;
+}
+
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+img {
+  margin: 0px;
+}
+
+#top-header, footer {
+  background: $banner-bg-color;
+}
+
+#top-header {
+  height:10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+
+/****************** Wrapper for page content to push down footer ******************/
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -205px;
+}
+
+
+/****************** Footer ******************/
+footer {
+  padding-top: 15px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 12px;
+
+  h3.widget-title {
+    line-height: 1.2em;
+  }
+    
+  p {
+    color:white;
+    margin: 0 0 9px;
+    text-align:left;
+  }
+  
+  .textwidget ul li {
+    line-height: 1.2em;
+    margin:5px 0;
+  }
+  
+  .widget {
+    margin-bottom: 29px;
+    a {
+      text-decoration: none;
+      color: white !important;
+    }
+    a:hover { 
+      color:white !important;
+      text-decoration: underline;
+    }
+  }
+  
+  #text-3 {
+    margin-bottom:17px;
+  }
+
+  /* Warwickshire County Councl icon */
+  #text-7 .textwidget img {
+    margin-top: 0.5em;
+    padding: 0.4em;
+    width: 10em;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  .keep_me_posted {
+    width:140px;
+  }
+  
+  .goog-te-gadget {
+    font-family: arial;
+    color: white!important;
+    white-space: nowrap;
+  }
+  
+  .widget_text {
+    padding-left:12px;
+  }
+}
+
+
+/****************** Mobile header ******************/
+@media (max-width: 979px) {
+  #site-search {
+    margin-top: 10px !important;
+  }
+  
+  .navbar .btn-navbar, .navbar .btn-search {
+    display: block;
+    margin-top: 12px;
+  }
+}
+  

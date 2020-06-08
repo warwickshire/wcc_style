@@ -1,0 +1,19 @@
+.bundle/
+log/*.log
+pkg/
+test/dummy/db/*.sqlite3
+test/dummy/db/*.sqlite3-journal
+test/dummy/log/*.log
+test/dummy/tmp/
+test/dummy/.sass-cache
+
+# Ignore RVM config files
+.ruby-*
+
+# Keep Gemfile.lock out of repository as code will be hosted as a gem
+Gemfile.lock
+
+# Ignore Aptana files
+.project
+
+*.gem

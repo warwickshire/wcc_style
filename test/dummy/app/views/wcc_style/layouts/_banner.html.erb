@@ -1,0 +1,14 @@
+<div class="row application-header" id="top-header">
+  <div class="container-full-indent">
+    <div class="pull-left" id="logo-wrap">
+      <h1 id="main-header">WCC Web Styles</h1>
+    </div>
+    <%= form_tag('resources/search', {class: 'navbar-form pull-right', id: 'site-search'}) do %>
+      <div class="form-group">
+        <%= label_tag 'search_term', 'Search'%>
+        <%= text_field_tag 'app_search_term', nil, placeholder: 'Search Resources', :class => "form-control"%>
+          <%=button_tag "Search", {class: 'btn btn-mini', id: 'app_search_button'}%>
+      </div>
+    <% end %>
+  </div>
+</div>

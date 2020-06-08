@@ -1,0 +1,41 @@
+= WCC Web Styles
+This is a dummy application to demonstrate how the wcc_style engine can be used within a Rails application.
+
+== Ruby version
+1.9.3 or greater
+
+== Database
+  sqlite
+
+== Installation
+  bundle install
+  rake db:setup
+
+== Configuration
+
+=== Select required wcc style
+  For wcc default styles, add one of the below lines to your app/stylesheets/application.css
+  *= require wcc_style/residents   <-- (green)
+  *= require wcc_style/business    <-- (blue)
+  *= require wcc_style/staff       <-- (blue/grey)
+  *= require wcc_style/corporate   <-- (grey)
+  
+  If you require a custom theme, create your own custom_style.css.scss file in host application.  See below for example:  
+
+  /****************** Site colour defaults ******************/
+  $banner-bg-color: green; 
+  $subnav-bg-color: darkgreen;
+  $link-color: #285e8e;
+  $primary-btn-color: darkgreen;
+  $primary-btn-focus: green;
+  $body-bg-color: #e6e6e6;
+  $footer-bg-color: #e6e6e6;
+  $main-bg-color: #eee;
+  @import "wcc_style/framework_and_overrides.css.scss";
+    
+=== Customise header, footer, navigation and messages
+  Customisations can be made within the app/test/dummy/app/views/wcc_style folder
+
+== Known Issues
+
+The resource search does not work in the dummy application.  It should search on results and match against the "title".  The results do not show when there is a match even though the underlying model search code does find the records.  The URL appends an additional "resources" in the url on then second submission, producing a URL:  http://localhost:3000/resources/resources/search
